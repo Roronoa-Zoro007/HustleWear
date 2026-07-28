@@ -1,0 +1,274 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+body{
+
+  font-family:'Poppins',sans-serif;
+
+  background:#f8fafc;
+
+  color:#0f172a;
+
+}
+
+
+a{
+
+  text-decoration:none;
+
+  color:inherit;
+
+}
+
+
+button{
+
+  font-family:'Poppins',sans-serif;
+
+}
+
+
+/* Smooth Scroll */
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+
+/* Premium Container */
+
+.container{
+
+  width:90%;
+
+  max-width:1200px;
+
+  margin:auto;
+
+}
+
+
+
+/* Section Style */
+
+.section{
+
+  padding:80px 20px;
+
+}
+
+
+
+/* Premium Button */
+
+.primary-btn{
+
+
+background:#0f172a;
+
+color:white;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+
+}
+
+
+
+.primary-btn:hover{
+
+
+transform:translateY(-5px);
+
+background:#1e293b;
+
+
+}
+
+
+
+/* Product Card Animation */
+
+
+.product-card{
+
+
+transition:0.4s;
+
+
+}
+
+
+
+.product-card:hover{
+
+
+transform:translateY(-10px);
+
+
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+/* Image Hover */
+
+
+.product-image{
+
+
+transition:0.4s;
+
+
+}
+
+
+
+.product-image:hover{
+
+
+transform:scale(1.08);
+
+
+}
+
+
+
+/* Navbar Shadow */
+
+
+nav{
+
+
+box-shadow:0 5px 20px rgba(0,0,0,0.15);
+
+
+}
+
+
+
+
+/* Fade Animation */
+
+
+.fade-in{
+
+
+animation:fadeIn 0.8s ease;
+
+
+}
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+/* Glass Effect */
+
+
+.glass{
+
+
+background:rgba(255,255,255,0.7);
+
+backdrop-filter:blur(10px);
+
+border-radius:20px;
+
+
+}
+
+
+
+/* Mobile Responsive */
+
+
+@media(max-width:768px){
+
+
+h1{
+
+font-size:35px!important;
+
+}
+
+
+nav{
+
+padding:15px 20px!important;
+
+}
+
+
+}
+@media(max-width:768px){
+
+.menu-btn{
+display:block!important;
+}
+
+
+.mobile-menu{
+
+position:absolute;
+
+top:70px;
+
+right:0;
+
+background:#0f172a;
+
+width:100%;
+
+padding:30px;
+
+flex-direction:column;
+
+}
+
+}
