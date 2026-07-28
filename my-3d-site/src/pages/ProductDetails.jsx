@@ -1,70 +1,36 @@
 import { useParams, Link } from "react-router-dom";
 import { useContext, useState } from "react";
-
 import Navbar from "../components/Navbar";
 import { CartContext } from "../context/CartContext";
 import products from "../data/products";
-
-
-
 function ProductDetails(){
-
-
 const {id}=useParams();
-
-
-
 const {
 addToCart,
 addToWishlist,
 wishlist
 }=useContext(CartContext);
-
-
-
-
 const product = products.find(
 item=>item.id===Number(id)
 );
-
-
-
-
 const [mainImage,setMainImage]=useState(
 product?.image
 );
-
-
 const [color,setColor]=useState(
 product?.colors?.[0]
 );
-
-
 const [size,setSize]=useState("M");
-
-
 const [quantity,setQuantity]=useState(1);
-
-
 const [added,setAdded]=useState(false);
-
-
-
-
-
-
+const [showImage, setShowImage] = useState(false);
 if(!product){
-
 return(
-
 <>
 <Navbar/>
-
 <h1 style={{
 textAlign:"center",
 marginTop:"50px"
 }}>
-
 Product Not Found
 
 </h1>
@@ -165,14 +131,16 @@ flexWrap:"wrap"
 
 {/* IMAGE */}
 
-
-
 <div>
 
-
-<div style={{
+<div
+style={{
+display:"flex",
+gap:"20px",
+flexWrap:"wrap",
 position:"relative"
-}}>
+}}
+>
 
 
 <button
@@ -204,7 +172,6 @@ boxShadow:"0 5px 20px rgba(0,0,0,.2)"
 
 >
 
-
 {
 liked
 ?
@@ -213,48 +180,8 @@ liked
 "♡"
 }
 
-
 </button>
 
-
-
-
-
-<img
-
-src={mainImage}
-
-alt={product.name}
-
-style={{
-
-width:"450px",
-height:"550px",
-
-objectFit:"cover",
-
-borderRadius:"25px"
-
-}}
-
-/>
-
-
-</div>
-
-
-
-
-
-
-
-<div style={{
-
-display:"flex",
-gap:"15px",
-marginTop:"20px"
-
-}}>
 
 
 {
@@ -263,40 +190,21 @@ product.images?.map((img,index)=>(
 
 
 <img
-
-key={index}
-
-src={img}
-
-alt="thumbnail"
-
-onClick={()=>setMainImage(img)}
-
-style={{
-
-width:"90px",
-height:"90px",
-
-objectFit:"cover",
-
-borderRadius:"12px",
-
-cursor:"pointer",
-
-border:
-
-mainImage===img
-
-?
-
-"3px solid #0f172a"
-
-:
-
-"1px solid #ddd"
-
-}}
-
+  key={index}
+  src={img}
+  alt={product.name}
+  onClick={() => {
+    setMainImage(img);
+    setShowImage(true);
+  }}
+  style={{
+    width: "220px",
+    height: "280px",
+    objectFit: "cover",
+    borderRadius: "25px",
+    boxShadow: "0 10px 30px rgba(0,0,0,.15)",
+    cursor: "zoom-in"
+  }}
 />
 
 
@@ -307,8 +215,6 @@ mainImage===img
 
 
 </div>
-
-
 
 
 </div>
@@ -928,7 +834,91 @@ text="Good product. Recommended."
 
 </section>
 
+{showImage && (
 
+<div
+
+onClick={()=>setShowImage(false)}
+
+style={{
+
+position:"fixed",
+
+top:0,
+
+left:0,
+
+width:"100%",
+
+height:"100%",
+
+background:"rgba(0,0,0,.9)",
+
+display:"flex",
+
+justifyContent:"center",
+
+alignItems:"center",
+
+zIndex:9999
+
+}}
+
+>
+
+<img
+
+src={mainImage}
+
+alt={product.name}
+
+onClick={(e)=>e.stopPropagation()}
+
+style={{
+
+maxWidth:"90%",
+
+maxHeight:"90%",
+
+borderRadius:"20px"
+
+}}
+
+/>
+
+<button
+
+onClick={()=>setShowImage(false)}
+
+style={{
+
+position:"absolute",
+
+top:"20px",
+
+right:"30px",
+
+fontSize:"40px",
+
+color:"white",
+
+background:"transparent",
+
+border:"none",
+
+cursor:"pointer"
+
+}}
+
+>
+
+✕
+
+</button>
+
+</div>
+
+)}
 
 </>
 
