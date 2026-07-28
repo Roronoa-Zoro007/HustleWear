@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import products from "../data/products";
-
+import "./Navbar.css";
 
 function Navbar(){
 
@@ -84,7 +84,7 @@ return(
 
 
 <nav
-
+className="navbar"
 style={{
 
 display:"flex",
@@ -112,7 +112,6 @@ gap:"30px"
 }}
 
 >
-
 
 
 
@@ -447,7 +446,7 @@ color:"#64748b"
 
 
 <div
-
+className="navbar-menu"
 style={{
 
 display:"flex",
