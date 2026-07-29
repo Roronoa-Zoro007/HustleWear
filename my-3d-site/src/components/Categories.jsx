@@ -3,23 +3,23 @@ import { Link } from "react-router-dom";
 function Categories() {
   const categories = [
     {
-      title: "Shirts",
-      image: "/images/shirt.jpg",
+      name: "Shirts",
+      image: "/images/shirt1.jpg",
       link: "/shirts",
     },
     {
-      title: "T-Shirts",
-      image: "/images/tshirt.jpg",
+      name: "T-Shirts",
+      image: "/images/tshirt1.jpg",
       link: "/tshirts",
     },
     {
-      title: "Jerseys",
-      image: "/images/jersey.jpg",
+      name: "Jerseys",
+      image: "/images/jersey1.jpg",
       link: "/jerseys",
     },
     {
-      title: "Pants",
-      image: "/images/pant.jpg",
+      name: "Pants",
+      image: "/images/pant1.jpg",
       link: "/pants",
     },
   ];
@@ -27,114 +27,79 @@ function Categories() {
   return (
     <section
       style={{
-        padding: "100px 30px",
-        background: "#020617",
-        color: "white",
+        padding: "80px 20px",
+        background: "#ffffff",
       }}
     >
+      <h2
+        style={{
+          textAlign: "center",
+          fontSize: "42px",
+          marginBottom: "50px",
+        }}
+      >
+        Explore Collections
+      </h2>
+
       <div
         style={{
-          maxWidth: "1400px",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+          gap: "25px",
+          maxWidth: "1200px",
           margin: "auto",
         }}
       >
-        <p
-          style={{
-            textAlign: "center",
-            color: "#38bdf8",
-            letterSpacing: "3px",
-          }}
-        >
-          SHOP BY CATEGORY
-        </p>
-
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "55px",
-            marginBottom: "60px",
-          }}
-        >
-          Explore Collections
-        </h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit,minmax(280px,1fr))",
-            gap: "30px",
-          }}
-        >
-          {categories.map((item) => (
-            <Link
-              key={item.title}
-              to={item.link}
+        {categories.map((item, index) => (
+          <Link
+            key={index}
+            to={item.link}
+            style={{ textDecoration: "none" }}
+          >
+            <div
               style={{
-                textDecoration: "none",
+                position: "relative",
+                height: "350px",
+                borderRadius: "25px",
+                overflow: "hidden",
+                cursor: "pointer",
+                boxShadow: "0 15px 35px rgba(0,0,0,.15)",
               }}
             >
+              <img
+                src={item.image}
+                alt={item.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+
               <div
                 style={{
-                  position: "relative",
-                  height: "420px",
-                  overflow: "hidden",
-                  borderRadius: "30px",
-                  cursor: "pointer",
-                  background: "#1e293b",
-                  boxShadow:
-                    "0 20px 40px rgba(0,0,0,.35)",
+                  position: "absolute",
+                  inset: 0,
+                  background:
+                    "linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2))",
+                  display: "flex",
+                  alignItems: "flex-end",
+                  padding: "25px",
                 }}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
+                <h3
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    transition: "0.5s",
-                  }}
-                />
-
-                <div
-                  style={{
-                    position: "absolute",
-                    inset: 0,
-                    background:
-                      "linear-gradient(to top,rgba(0,0,0,.8),transparent)",
-                  }}
-                />
-
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "30px",
-                    left: "25px",
+                    color: "white",
+                    fontSize: "28px",
+                    margin: 0,
                   }}
                 >
-                  <h3
-                    style={{
-                      color: "white",
-                      fontSize: "32px",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-
-                  <span
-                    style={{
-                      color: "#38bdf8",
-                    }}
-                  >
-                    Explore →
-                  </span>
-                </div>
+                  {item.name}
+                </h3>
               </div>
-            </Link>
-          ))}
-        </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </section>
   );

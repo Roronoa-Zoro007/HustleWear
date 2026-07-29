@@ -8,21 +8,21 @@ const products = [
 {
 id:5,
 name:"Oversized Black T-Shirt",
-price:799,
+price:500,
 image:"/images/tshirt1.jpg"
 },
 
 {
 id:6,
 name:"Premium White T-Shirt",
-price:699,
+price:500,
 image:"/images/tshirt3.jpg"
 },
 
 {
 id:7,
 name:"Street Style T-Shirt",
-price:899,
+price:500,
 image:"/images/tshirt5.jpg"
 },
 
@@ -36,7 +36,7 @@ image:"/images/tshirt7.jpg"
 {
 id:15,
 name:"Oversized Beige T-Shirt",
-price:950,
+price:500,
 image:"/images/tshirt9.jpg"
 }
 

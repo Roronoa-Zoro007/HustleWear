@@ -387,9 +387,114 @@ filter:"drop-shadow(0 30px 30px rgba(0,0,0,.5))"
 
 
 
+{/* FASHION BANNER */}
 
+<section
+style={{
+padding:"100px 30px",
+background:"#ffffff"
+}}
+>
 
+<h2
+style={{
+textAlign:"center",
+fontSize:"50px",
+marginBottom:"15px",
+color:"#0f172a"
+}}
+>
+Latest Fashion Collection
+</h2>
 
+<p
+style={{
+textAlign:"center",
+fontSize:"18px",
+color:"#64748b",
+marginBottom:"60px"
+}}
+>
+Discover premium streetwear designed for modern lifestyle.
+</p>
+
+<div
+style={{
+display:"grid",
+gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",
+gap:"25px",
+maxWidth:"1400px",
+margin:"auto"
+}}
+>
+
+<div style={{
+overflow:"hidden",
+borderRadius:"25px",
+boxShadow:"0 15px 40px rgba(0,0,0,.12)"
+}}>
+<img
+src="/images/tshirt1.jpg"
+alt=""
+style={{
+width:"100%",
+height:"450px",
+objectFit:"cover"
+}}
+/>
+</div>
+
+<div style={{
+overflow:"hidden",
+borderRadius:"25px",
+boxShadow:"0 15px 40px rgba(0,0,0,.12)"
+}}>
+<img
+src="/images/shirt1.jpg"
+alt=""
+style={{
+width:"100%",
+height:"450px",
+objectFit:"cover"
+}}
+/>
+</div>
+
+<div style={{
+overflow:"hidden",
+borderRadius:"25px",
+boxShadow:"0 15px 40px rgba(0,0,0,.12)"
+}}>
+<img
+src="/images/jersey1.jpg"
+alt=""
+style={{
+width:"100%",
+height:"450px",
+objectFit:"cover"
+}}
+/>
+</div>
+
+<div style={{
+overflow:"hidden",
+borderRadius:"25px",
+boxShadow:"0 15px 40px rgba(0,0,0,.12)"
+}}>
+<img
+src="/images/pant1.jpg"
+alt=""
+style={{
+width:"100%",
+height:"450px",
+objectFit:"cover"
+}}
+/>
+</div>
+
+</div>
+
+</section>
 
 
 {/* FEATURED PRODUCTS */}
