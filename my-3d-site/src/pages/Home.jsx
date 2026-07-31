@@ -24,367 +24,198 @@ return(
 
 
 <section
-
 style={{
-
-minHeight:"90vh",
-
-background:
-
-"linear-gradient(135deg,#020617,#0f172a,#1e293b)",
-
-color:"white",
-
+minHeight:"100vh",
+background:"#020617",
 display:"flex",
-
 alignItems:"center",
-
 justifyContent:"center",
-
 padding:"50px 30px",
-
-overflow:"hidden"
-
+color:"white"
 }}
-
 >
 
-
-
 <div
-
 style={{
-
-maxWidth:"1200px",
-
+maxWidth:"1400px",
 width:"100%",
-
-display:"flex",
-
-alignItems:"center",
-
-justifyContent:"space-between",
-
-gap:"50px",
-
-flexWrap:"wrap"
-
+display:"grid",
+gridTemplateColumns:"1fr 1fr",
+gap:"60px",
+alignItems:"center"
 }}
-
 >
 
+{/* LEFT */}
 
-
-
-
-
-
-{/* TEXT */}
-
-
-
-<div
-
-style={{
-
-flex:"1",
-
-minWidth:"300px"
-
-}}
-
->
-
+<div>
 
 <p
-
 style={{
-
+color:"#38bdf8",
 letterSpacing:"4px",
-
-color:"#94a3b8"
-
+fontWeight:"bold"
 }}
-
 >
-
-PREMIUM STREETWEAR
-
+NEW COLLECTION 2026
 </p>
-
-
-
 
 <h1
-
 style={{
-
-fontSize:"70px",
-
+fontSize:"80px",
 lineHeight:"1",
-
 margin:"20px 0"
-
 }}
-
 >
-
 HustleWear
-
 </h1>
 
-
-
-
-
 <h2
-
 style={{
-
 fontSize:"35px",
-
-fontWeight:"400"
-
+fontWeight:"400",
+color:"#cbd5e1"
 }}
-
 >
-
-Move Different.
-<br/>
-
-Wear Confidence.
-
+Premium Streetwear
+For The Next Generation
 </h2>
 
-
-
-
-
-
 <p
-
 style={{
-
+marginTop:"25px",
 fontSize:"18px",
-
-color:"#cbd5e1",
-
-maxWidth:"450px",
-
-lineHeight:"1.7"
-
+color:"#94a3b8",
+maxWidth:"500px",
+lineHeight:"1.8"
 }}
-
 >
-
-Premium fashion collection designed for modern lifestyle.
-Discover shirts, t-shirts, jerseys and pants.
-
+Explore premium shirts, oversized t-shirts,
+sports jerseys and modern pants designed
+for confidence and style.
 </p>
 
-
-
-
-
-
-
-
 <div
-
 style={{
-
 display:"flex",
-
 gap:"20px",
-
 marginTop:"35px"
-
 }}
-
 >
-
 
 <Link to="/shop">
-
-
 <button
-
 style={{
-
 padding:"16px 40px",
-
-borderRadius:"30px",
-
-border:"none",
-
 background:"white",
-
-color:"#0f172a",
-
-fontSize:"16px",
-
+color:"#020617",
+border:"none",
+borderRadius:"50px",
 fontWeight:"bold",
-
 cursor:"pointer"
-
 }}
-
 >
-
 Shop Now
-
 </button>
-
-
 </Link>
-
-
-
-
-
 
 <Link to="/shirts">
-
-
 <button
-
 style={{
-
 padding:"16px 40px",
-
-borderRadius:"30px",
-
-border:"2px solid white",
-
 background:"transparent",
-
+border:"2px solid white",
 color:"white",
-
-fontSize:"16px",
-
+borderRadius:"50px",
 cursor:"pointer"
-
 }}
-
 >
-
 Explore
-
 </button>
-
-
 </Link>
 
-
+</div>
 
 </div>
 
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-{/* HERO IMAGE */}
-
-
+{/* RIGHT */}
 
 <div
-
 style={{
-
-flex:"1",
-
 display:"flex",
-
-justifyContent:"center",
-
-minWidth:"300px"
-
+justifyContent:"center"
 }}
-
 >
-
-
 
 <div
-
 style={{
-
-width:"420px",
-
-height:"520px",
-
-borderRadius:"40px",
-
-background:
-
-"linear-gradient(145deg,#334155,#020617)",
-
-display:"flex",
-
-alignItems:"center",
-
-justifyContent:"center",
-
-boxShadow:"0 30px 80px rgba(0,0,0,.5)",
-
-transform:"rotate(-5deg)"
-
+width:"500px",
+height:"650px",
+overflow:"hidden",
+borderRadius:"30px",
+boxShadow:"0 30px 80px rgba(0,0,0,.5)"
 }}
-
 >
-
-
 
 <img
-
-src="/images/hero.png"
-
+src="/images/hero-model.jpg"
 alt="HustleWear"
-
 style={{
-
-width:"90%",
-
-height:"90%",
-
-objectFit:"contain",
-
-filter:"drop-shadow(0 30px 30px rgba(0,0,0,.5))"
-
+width:"100%",
+height:"100%",
+objectFit:"cover"
 }}
-
 />
 
-
+</div>
 
 </div>
 
-
-
 </div>
-
-
-
-
-
-
-</div>
-
 
 </section>
 
+<section
+style={{
+padding:"80px 30px",
+background:"white"
+}}
+>
 
+<div
+style={{
+maxWidth:"1200px",
+margin:"auto",
+display:"grid",
+gridTemplateColumns:"repeat(4,1fr)",
+gap:"30px",
+textAlign:"center"
+}}
+>
+
+<div>
+<h1>500+</h1>
+<p>Happy Customers</p>
+</div>
+
+<div>
+<h1>100+</h1>
+<p>Premium Products</p>
+</div>
+
+<div>
+<h1>24/7</h1>
+<p>Customer Support</p>
+</div>
+
+<div>
+<h1>99%</h1>
+<p>Positive Reviews</p>
+</div>
+
+</div>
+
+</section>
 
 
 {/* FASHION BANNER */}
@@ -482,7 +313,7 @@ borderRadius:"25px",
 boxShadow:"0 15px 40px rgba(0,0,0,.12)"
 }}>
 <img
-src="/images/pant1.jpg"
+src="/images/hero-model.jpg"
 alt=""
 style={{
 width:"100%",
