@@ -44,6 +44,7 @@ gridTemplateColumns:"1fr 1fr",
 gap:"60px",
 alignItems:"center"
 }}
+
 >
 
 {/* LEFT */}
@@ -158,7 +159,7 @@ boxShadow:"0 30px 80px rgba(0,0,0,.5)"
 >
 
 <img
-src="/images/hero-model.jpg"
+src="/images/tshirt9.jpg"
 alt="HustleWear"
 style={{
 width:"100%",
@@ -313,7 +314,7 @@ borderRadius:"25px",
 boxShadow:"0 15px 40px rgba(0,0,0,.12)"
 }}>
 <img
-src="/images/hero-model.jpg"
+src="/images/tshirt3.jpg"
 alt=""
 style={{
 width:"100%",
