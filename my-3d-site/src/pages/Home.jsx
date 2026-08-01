@@ -40,7 +40,7 @@ style={{
 maxWidth:"1400px",
 width:"100%",
 display:"grid",
-gridTemplateColumns:"1fr 1fr",
+gridTemplateColumns:"repeat(auto-fit,minmax(350px,1fr))",
 gap:"60px",
 alignItems:"center"
 }}
@@ -63,7 +63,7 @@ NEW COLLECTION 2026
 
 <h1
 style={{
-fontSize:"80px",
+fontSize:"clamp(40px,8vw,80px)",
 lineHeight:"1",
 margin:"20px 0"
 }}
@@ -150,7 +150,8 @@ justifyContent:"center"
 
 <div
 style={{
-width:"500px",
+width:"100%",
+maxWidth:"500px",
 height:"650px",
 overflow:"hidden",
 borderRadius:"30px",
@@ -188,7 +189,7 @@ style={{
 maxWidth:"1200px",
 margin:"auto",
 display:"grid",
-gridTemplateColumns:"repeat(4,1fr)",
+gridTemplateColumns:"repeat(auto-fit,minmax(180px,1fr))",
 gap:"30px",
 textAlign:"center"
 }}
