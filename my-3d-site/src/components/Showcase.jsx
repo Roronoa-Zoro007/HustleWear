@@ -217,23 +217,15 @@ boxShadow:"0 40px 100px rgba(0,0,0,.6)"
 
 
 <img
-
 src="/images/showcase.png"
-
 alt="collection"
-
 style={{
-
 width:"90%",
-
 height:"90%",
-
-objectFit:"contain",
-
+objectFit:"cover",
+borderRadius:"50%",
 animation:"float 3s ease-in-out infinite"
-
 }}
-
 />
 
 
