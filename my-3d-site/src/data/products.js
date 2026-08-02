@@ -83,7 +83,7 @@ const products = [
     "/images/shirt1.jpg",
     "/images/shirt2.jpg"
   ],
-  colors: ["White","Blue"],
+  colors: ["Pink"],
   stock: 12,
   description: "Premium casual shirt."
 },
@@ -105,17 +105,17 @@ const products = [
 
 {
   id: 3,
-  name: "Black Stylish Shirt",
+  name: "Green Stylish Shirt",
   price: 700,
   category: "Shirt",
-  image: "/images/shirt.jpg",
+  image: "/images/shirt5.jpg",
   images: [
-    "/images/shirt.jpg",
-    "/images/shirt.jpg"
+    "/images/shirt5.jpg",
+    "/images/shirt6.jpg"
   ],
-  colors: ["Black"],
+  colors: ["Green"],
   stock: 8,
-  description: "Black stylish shirt."
+  description: "Green stylish shirt."
 }
 ];
 
