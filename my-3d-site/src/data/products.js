@@ -72,6 +72,65 @@ const products = [
   colors: ["Beige"],
   stock: 10,
   description: "Modern oversized beige t-shirt."
+},
+{
+  id: 15,
+  name: "Oversized Beige T-Shirt",
+  price: 950,
+  category: "T-Shirt",
+  image: "/images/tshirt9.jpg",
+  images: [
+    "/images/tshirt9.jpg",
+    "/images/tshirt10.jpg"
+  ],
+  colors: ["Beige"],
+  stock: 10,
+  description: "Modern oversized beige t-shirt."
+},
+
+{
+  id: 1,
+  name: "Premium Casual Shirt",
+  price: 700,
+  category: "Shirt",
+  image: "/images/shirt1.jpg",
+  images: [
+    "/images/shirt1.jpg",
+    "/images/shirt2.jpg"
+  ],
+  colors: ["White","Blue"],
+  stock: 12,
+  description: "Premium casual shirt."
+},
+
+{
+  id: 2,
+  name: "White Formal Shirt",
+  price: 700,
+  category: "Shirt",
+  image: "/images/shirt2.jpg",
+  images: [
+    "/images/shirt2.jpg",
+    "/images/shirt3.jpg"
+  ],
+  colors: ["White"],
+  stock: 10,
+  description: "White formal shirt."
+},
+
+{
+  id: 3,
+  name: "Black Stylish Shirt",
+  price: 700,
+  category: "Shirt",
+  image: "/images/shirt3.jpg",
+  images: [
+    "/images/shirt3.jpg",
+    "/images/shirt1.jpg"
+  ],
+  colors: ["Black"],
+  stock: 8,
+  description: "Black stylish shirt."
 }
 ];
 

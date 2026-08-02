@@ -1,37 +1,13 @@
 import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
-
+import products from "../data/products";
 
 function Shirts(){
 
 
-const products=[
-
-{
-id:1,
-name:"Premium Casual Shirt",
-price:899,
-image:"/images/shirt1.jpg"
-},
-
-
-{
-id:2,
-name:"White Formal Shirt",
-price:999,
-image:"/images/shirt2.jpg"
-},
-
-
-{
-id:3,
-name:"Black Stylish Shirt",
-price:1099,
-image:"/images/shirt3.jpg"
-}
-
-];
-
+const shirtProducts = products.filter(
+  item => item.category === "Shirt"
+);
 
 
 return(
@@ -76,7 +52,7 @@ flexWrap:"wrap"
 
 
 {
-products.map(product=>(
+shirtProducts.map(product => (
 
 <ProductCard
 
