@@ -5,13 +5,18 @@ import { CartContext } from "../context/CartContext";
 import products from "../data/products";
 function ProductDetails(){
 const {id}=useParams();
+
+console.log("URL ID =", id);
+console.log("All Products =", products);
+
 const {
 addToCart,
 addToWishlist,
 wishlist
 }=useContext(CartContext);
+
 const product = products.find(
-item=>item.id===Number(id)
+item => item.id === Number(id)
 );
 const [mainImage,setMainImage]=useState(
 product?.image
