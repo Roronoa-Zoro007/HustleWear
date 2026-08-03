@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import MyOrders from "./pages/MyOrders";
 import Home from "./pages/Home";
 import Shirts from "./pages/Shirts";
 import Tshirts from "./pages/Tshirts";
@@ -13,14 +13,16 @@ import Contact from "./pages/Contact";
 import Wishlist from "./pages/Wishlist";
 import Shop from "./pages/Shop";
 import CartDrawer from "./components/CartDrawer";
-
+import Admin from "./pages/Admin";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Home */}
         <Route path="/" element={<Home />} />
-
+        <Route path="/admin" element={<Admin />} /> 
         {/* Categories */}
         <Route path="/shirts" element={<Shirts />} />
         <Route path="/tshirts" element={<Tshirts />} />
@@ -41,6 +43,9 @@ function App() {
 
         {/* Checkout */}
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/my-orders" element={<MyOrders />} />
       </Routes>
 
       <CartDrawer />

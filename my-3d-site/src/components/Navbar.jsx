@@ -1,6 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useState } from "react";
+
 import { CartContext } from "../context/CartContext";
+import { AuthContext } from "../context/AuthContext";
+
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase";
+
 import products from "../data/products";
 import "./Navbar.css";
 
@@ -12,7 +18,16 @@ cart,
 wishlist,
 setCartOpen
 }=useContext(CartContext);
+const { user } = useContext(AuthContext);
 
+
+const handleLogout = async()=>{
+
+  await signOut(auth);
+
+  navigate("/login");
+
+};
 
 
 const navigate = useNavigate();
@@ -493,10 +508,126 @@ Pants
 
 </NavLink>
 
+<NavLink to="/">
+  Home
+</NavLink>
+
+<NavLink to="/shop">
+  Shop
+</NavLink>
+
+<NavLink to="/about">
+  About
+</NavLink>
+
+<NavLink to="/contact">
+  Contact
+</NavLink>
+{
+  user?.uid === "3nwkoENLYGeoIHhRv3g7IPgTIV82" && (
+    <Link
+      to="/admin"
+      style={{
+        color: "white",
+        textDecoration: "none",
+        fontWeight: "600"
+      }}
+    >
+      Admin
+    </Link>
+  )
+}
+
+{/* AUTH */}
+
+{
+
+user ? (
+
+<>
+
+<Link
+to="/my-orders"
+style={{
+color:"white",
+textDecoration:"none",
+fontWeight:"600"
+}}
+>
+
+👤 {user.displayName || "Account"}
+
+</Link>
 
 
+<button
+
+onClick={handleLogout}
+
+style={{
+background:"transparent",
+border:"none",
+color:"white",
+cursor:"pointer",
+fontSize:"15px",
+fontWeight:"600"
+}}
+
+>
+
+Logout
+
+</button>
+
+</>
+
+)
+
+:
+
+(
+
+<>
+
+<Link
+
+to="/login"
+
+style={{
+color:"white",
+textDecoration:"none",
+fontWeight:"600"
+}}
+
+>
+
+Login
+
+</Link>
 
 
+<Link
+
+to="/register"
+
+style={{
+color:"white",
+textDecoration:"none",
+fontWeight:"600"
+}}
+
+>
+
+Register
+
+</Link>
+
+
+</>
+
+)
+
+}
 
 
 

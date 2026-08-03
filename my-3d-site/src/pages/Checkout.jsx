@@ -2,7 +2,8 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
-
+import { addDoc, collection } from "firebase/firestore";
+import { db, auth } from "../firebase";
 function Checkout() {
   const { cart } = useContext(CartContext);
 
@@ -30,25 +31,45 @@ function Checkout() {
   const shipping = cart.length > 0 ? 80 : 0;
   const total = subtotal + shipping;
 
-  const placeOrder = () => {
-    if (cart.length === 0) {
-      alert("Your cart is empty");
-      return;
-    }
+const placeOrder = async () => {
 
-    if (
-      !customerName.trim() ||
-      !phone.trim() ||
-      !address.trim()
-    ) {
-      alert(
-        "Please fill all required fields"
-      );
-      return;
-    }
+  if(!auth.currentUser){
+    alert("Please login before placing order");
+    return;
+  }
 
-    setOrder(true);
-  };
+
+  if (cart.length === 0) {
+    alert("Your cart is empty");
+    return;
+  }
+
+  if (
+    !customerName.trim() ||
+    !phone.trim() ||
+    !address.trim()
+  ) {
+    alert("Please fill all required fields");
+    return;
+  }
+
+  await addDoc(collection(db, "orders"), {
+  orderId,
+  customerName,
+  phone,
+  email,
+  address,
+  payment,
+  total,
+  cart,
+  status: "Pending",
+
+  userId: auth.currentUser.uid,
+
+  createdAt: new Date()
+});
+  setOrder(true);
+};
 
   if (order) {
     return (
